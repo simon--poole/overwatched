@@ -44,6 +44,7 @@ gulp.task('generate-team-icons', ['resize-team-icons'], function () {
 			name: 'teams',
 			processor: 'less',
 			margin: 0,
+			engine: 'sprity-gm'
 		})
 		.on('error', gutil.log)
 		.pipe(gulpif('*.png', gulp.dest('./images/'), gulp.dest('./less/')))
@@ -57,6 +58,7 @@ gulp.task('generate-thumbnails', ['generate-team-icons'], function () {
 			processor: 'less',
 			format: "jpg",
 			margin: 0,
+			engine: 'sprity-gm'
 		})
 		.on('error', gutil.log)
 		.pipe(gulpif('*.jpg', gulp.dest('./images/'), gulp.dest('./less/')))

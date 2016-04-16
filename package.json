@@ -9,20 +9,23 @@
   "bugs": {
     "url": "https://github.com/simon--poole/loleventvods/issues"
   },
+  "license": "MIT",
   "devDependencies": {
     "gulp": "*",
     "gulp-clean": "*",
     "gulp-cssbeautify": "*",
     "gulp-cssmin": "*",
+    "gulp-gm": "*",
+    "gulp-if": "*",
+    "gulp-image-optimization": "*",
     "gulp-less": "*",
     "gulp-rename": "*",
     "gulp-util": "*",
-    "gulp-if": "*",
     "sprity": "*",
+    "sprity-gm": "^1.0.2",
     "sprity-less": "*"
   },
   "dependencies": {
-    "gulp-gm": "*",
-    "gulp-image-optimization": "*"
+    "lwip": "0.0.8"
   }
 }
