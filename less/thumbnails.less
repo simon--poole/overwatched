@@ -1,10 +1,13 @@
 @import (reference) "thumb-sprites.less";
-.self .thumbnail {
+.self .thumbnail, .thumbnail {
 	background: url(%%thumbnails%%) no-repeat;
 	width: 100px;
 	height: 70px;
 	padding: 0;
 	.sprite-position(@lev)!important;
+	> img {
+		display: none;
+	}
 }
 .thing .thumbnail {
 	&[href*="s3_china"],

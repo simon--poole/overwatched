@@ -70,40 +70,6 @@
     margin-top: 10px;
   }
   
-  // Theme Switcher
-  a[href="//www.reddit.com/r/loleventvods/"],
-  a[href="#2themes"],
-  a[href="//dd.reddit.com/r/loleventvods/"] {
-    margin: 10px 0 0 0;
-    height: 50px;
-    display: inline-block;
-    background: url(%%theme-selector%%) no-repeat;
-  }
-  a[href="//www.reddit.com/r/loleventvods/"] {
-    width: 75px;
-    margin-left: 20px;
-    &:hover {
-      background-position: 0px -50px;
-    }
-  }
-  a[href="#2themes"] {
-    margin-left: -5px;
-    width: 130px;
-    background-position: -85px 0px;
-    cursor: default;
-    &:after {
-      content: none!important;
-    }
-  }
-  a[href="//dd.reddit.com/r/loleventvods/"] {
-    margin-left: -5px;
-    margin-right: -20px;
-    width: 75px;
-    background-position: -213px 0px;
-    &:hover {
-      background-position: -213px -50px;
-    }
-  }
   
   /* sidebar social media icons */
   @social-height: -49px;
@@ -236,10 +202,12 @@
     min-height: 100px;
     margin: 5px 0;
   }
+  a[href="/r/loleventvods"],
   a[href="/r/dotavods"],
   a[href="/r/hearthstonevods"],
   a[href="/r/cseventvods"],
-  a[href="/r/SpoilerFreeSC"] {
+  a[href="/r/SpoilerFreeSC"],
+  a[href="/r/overwatched"] {
     .hide-text;
     padding: 0 300px 85px 0;
     background: url(%%related-subreddits%%) top left no-repeat;
@@ -247,14 +215,20 @@
       opacity: 0.6;
     }
   }
-  a[href="/r/hearthstonevods"] {
+  a[href="/r/dotavods"] {
     .bg-pos(0, -100px);
   }
-  a[href="/r/cseventvods"] {
+  a[href="/r/hearthstonevods"] {
     .bg-pos(0, -200px);
   }
-  a[href="/r/SpoilerFreeSC"] {
+  a[href="/r/cseventvods"] {
     .bg-pos(0, -300px);
+  }
+  a[href="/r/SpoilerFreeSC"] {
+    .bg-pos(0, -400px);
+  }
+  a[href="/r/overwatched"] {
+    .bg-pos(0, -500px);
   }
   // Fall-back for "Stay connected" and "Related subreddits" sections
   // in case stylesheet is disabled or doesn't load
