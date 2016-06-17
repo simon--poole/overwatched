@@ -75,7 +75,7 @@ gulp.task('sprites', ['generate-thumbnails'], function () {
 });
 
 gulp.task('less-build', ['clean'], function () {
-	return gulp.src('less/loleventvods.less')
+	return gulp.src('less/overwatched.less')
 		.pipe(less())
 		.pipe(cssbeautify({
 			indent: '	',
@@ -85,7 +85,7 @@ gulp.task('less-build', ['clean'], function () {
 		.pipe(gulp.dest('dist/'));
 });
 gulp.task('minify-css', ['less-build'], function () {
-	return gulp.src('dist/loleventvods.css')
+	return gulp.src('dist/overwatched.css')
 		.pipe(cssmin())
 		.pipe(rename({
 			suffix: '.min'
