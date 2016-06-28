@@ -194,20 +194,28 @@
 
 /* Modify submit a new post, hide "submit link" button */
 
-.submit .morelink {
-    background: #1c1c1c;
-    border: 0;
-    border-top: 3px solid #1c1c1c;
-    border-bottom: 3px solid #1c1c1c;
-    &:hover {
-        border-bottom: 3px solid @highlight;
-    }
-    a {
-    	color: #FFF;
-    }
-    .nub {
-        display: none;
-    }
+.submit {
+	.morelink {
+	    background: #1c1c1c!important;
+	    border: 0;
+	    border-top: 3px solid #1c1c1c;
+	    border-bottom: 3px solid #1c1c1c;
+	    &:hover {
+	        border-bottom: 3px solid @highlight;
+	        &.disabled {
+	        	border: 0;
+	        }
+	    }
+	    a {
+	    	color: #FFF;
+	    }
+	    .nub {
+	        display: none;
+	    }
+	}
+	&.disabled {
+		display: none;
+	}
 }
 
 .submit-link {
@@ -293,4 +301,13 @@
 
 div.sidebox.create {
     display: none;
+}
+
+#ad-frame, #ad_main, .sponsorshipbox {
+	width: 325px;
+	max-width: 325px;
+	text-align: center;
+	> iframe {
+		width: 300px!important;
+	}
 }
