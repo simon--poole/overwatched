@@ -12,7 +12,6 @@ var sprity = require('sprity');
 var sprityless = require('sprity-less');
 var gm = require('gulp-gm');
 var gutil = require('gulp-util');
-var imop = require('gulp-image-optimization');
 
 //Default task - watches
 gulp.task('default', ['build']);
@@ -50,9 +49,9 @@ gulp.task('generate-team-icons', ['resize-team-icons'], function () {
 		.pipe(gulpif('*.png', gulp.dest('./images/'), gulp.dest('./less/')))
 });
 
-gulp.task('generate-thumbnails', ['generate-team-icons'], function () {
+gulp.task('generate-thumbnails', function () {
 	return sprity.src({
-			src: './thumbs/*.png',
+			src: './thumbs/*.*',
 			style: './less/thumb-sprites.less',
 			name: 'thumbnails',
 			processor: 'less',
@@ -64,14 +63,8 @@ gulp.task('generate-thumbnails', ['generate-team-icons'], function () {
 		.pipe(gulpif('*.jpg', gulp.dest('./images/'), gulp.dest('./less/')))
 });
 
-gulp.task('sprites', ['generate-thumbnails'], function () {
-	return gulp.src(['images/teams.png','images/thumbnails.jpg'])
-		.pipe(imop({
-			optimizationLevel: 7,
-			progressive: true,
-			interlaced: true
-		}))
-		.pipe(gulp.dest('images/'))
+gulp.task('sprites', ['generate-thumbnails','generate-team-icons'], function () {
+	return true;
 });
 
 gulp.task('less-build', ['clean'], function () {

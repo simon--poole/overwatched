@@ -9,3 +9,28 @@
 		display: none;
 	}
 }
+.thing .thumbnail {
+	&[href*="og"] {
+		.sprite-position(@og)!important;
+	}
+	&[href*="onog"] {
+		.sprite-position(@onog)!important;
+	}
+	&[href*="esl"],
+	&[href*="go4overwatch"] {
+		.sprite-position(@esl)!important;
+	}
+	&[href*="gosugamers"] {
+		.sprite-position(@gosugamers)!important;
+	}
+	&[href*="dreamhack"] {
+		.sprite-position(@dh)!important;
+	}
+	&[href*="alphacast"] {
+		.sprite-position(@alphacast)!important;
+	}
+	&[href*="playstv"] {
+		.sprite-position(@playstv)!important;
+	}
+
+}
